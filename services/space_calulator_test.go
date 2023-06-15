@@ -7,7 +7,7 @@ import (
 
 func TestGetTotalDataSizeInGB(t *testing.T) {
 
-	got := getTotalDataSizeInGB(testLoad)
+	got := getTotalDataSizeInGB(testLoad80000NodesWith4MbReport)
 	want := int64(16105)
 	fmt.Println(got)
 	if got != want {
@@ -17,7 +17,7 @@ func TestGetTotalDataSizeInGB(t *testing.T) {
 
 func TestGetTotalSpaceRequiredWithErrorMarginInGB(t *testing.T) {
 
-	got := getTotalSpaceRequiredWithErrorMarginInGB(testLoad)
+	got := getTotalSpaceRequiredWithErrorMarginInGB(testLoad80000NodesWith4MbReport)
 	want := int64(20131)
 	fmt.Println(got)
 	if got != want {

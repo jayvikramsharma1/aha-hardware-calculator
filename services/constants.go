@@ -1,6 +1,7 @@
 package main
 
 type SystemLoads struct {
+	name                        string
 	noOfNodes                   int64
 	noOfComplianceScan          int
 	frequencyOfComplianceScan   string

@@ -1,11 +1,134 @@
 package main
 
 var (
-	testLoad = &SystemLoads{
-		noOfNodes:                   8000,
+	testLoad1000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 1000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   1000,
 		noOfComplianceScan:          1,
-		frequencyOfComplianceScan:   FREQ_PER_HOUR,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
 		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad1000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 1000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   1000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad1000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 1000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   1000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+
+	testLoad2000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 2000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   2000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad2000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 2000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   2000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad2000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 2000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   2000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+
+	testLoad3000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 3000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   3000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad3000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 3000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   3000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad3000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 3000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   3000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "1MB",
 		noOfClientRun:               1,
 		frequencyOfClientRun:        FREQ_PER_HOUR,
 		clientRunSize:               "300KB",
@@ -17,6 +140,7 @@ var (
 	}
 
 	testLoad3000NodesWith4MbReport = &SystemLoads{
+		name:                        "Test with 3000 nodes and 4Mb of compliance report size",
 		noOfNodes:                   3000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -31,6 +155,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad3000NodesWith2MbReport = &SystemLoads{
+		name:                        "Test with 3000 nodes and 2Mb of compliance report size",
 		noOfNodes:                   3000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -45,6 +170,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad3000NodesWith1MbReport = &SystemLoads{
+		name:                        "Test with 3000 nodes and 1Mb of compliance report size",
 		noOfNodes:                   3000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -59,7 +185,54 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 
+	testLoad5000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 5000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   5000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad5000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 5000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   5000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad5000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 5000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   5000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "1MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+
 	testLoad5000NodesWith4MbReport = &SystemLoads{
+		name:                        "Test with 5000 nodes and 4Mb of compliance report size",
 		noOfNodes:                   5000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -74,6 +247,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad5000NodesWith2MbReport = &SystemLoads{
+		name:                        "Test with 5000 nodes and 2Mb of compliance report size",
 		noOfNodes:                   5000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -88,6 +262,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad5000NodesWith1MbReport = &SystemLoads{
+		name:                        "Test with 5000 nodes and 1Mb of compliance report size",
 		noOfNodes:                   5000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -101,7 +276,55 @@ var (
 		DataRetentionPolicyInDays:   30,
 		noOfShardsInOpensearchIndex: 2,
 	}
+
+	testLoad10000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 10000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   10000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad10000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 10000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   10000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad10000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 10000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   10000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "1MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+
 	testLoad10000NodesWith4MbReport = &SystemLoads{
+		name:                        "Test with 10000 nodes and 4Mb of compliance report size",
 		noOfNodes:                   10000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -116,6 +339,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad10000NodesWith2MbReport = &SystemLoads{
+		name:                        "Test with 10000 nodes and 2Mb of compliance report size",
 		noOfNodes:                   10000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -130,6 +354,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad10000NodesWith1MbReport = &SystemLoads{
+		name:                        "Test with 10000 nodes and 1Mb of compliance report size",
 		noOfNodes:                   10000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -143,7 +368,55 @@ var (
 		DataRetentionPolicyInDays:   30,
 		noOfShardsInOpensearchIndex: 2,
 	}
+
+	testLoad20000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 20000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   20000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad20000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 20000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   20000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad20000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 20000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   20000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "1MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+
 	testLoad20000NodesWith4MbReport = &SystemLoads{
+		name:                        "Test with 20000 nodes and 4Mb of compliance report size",
 		noOfNodes:                   20000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -158,6 +431,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad20000NodesWith2MbReport = &SystemLoads{
+		name:                        "Test with 20000 nodes and 2Mb of compliance report size",
 		noOfNodes:                   20000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -172,6 +446,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad20000NodesWith1MbReport = &SystemLoads{
+		name:                        "Test with 20000 nodes and 1Mb of compliance report size",
 		noOfNodes:                   20000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -185,7 +460,54 @@ var (
 		DataRetentionPolicyInDays:   30,
 		noOfShardsInOpensearchIndex: 2,
 	}
+	testLoad40000NodesWith4MbReportPerDay = &SystemLoads{
+		name:                        "Test with 40000 nodes and 4Mb of compliance report size per day",
+		noOfNodes:                   40000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "4MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad40000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 40000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   40000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad40000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 40000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   40000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "1MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+
 	testLoad40000NodesWith4MbReport = &SystemLoads{
+		name:                        "Test with 40000 nodes and 4Mb of compliance report size",
 		noOfNodes:                   40000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -200,6 +522,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad40000NodesWith2MbReport = &SystemLoads{
+		name:                        "Test with 40000 nodes and 2Mb of compliance report size",
 		noOfNodes:                   40000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -214,6 +537,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad40000NodesWith1MbReport = &SystemLoads{
+		name:                        "Test with 40000 nodes and 1Mb of compliance report size",
 		noOfNodes:                   40000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -228,6 +552,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad80000NodesWith4MbReport = &SystemLoads{
+		name:                        "Test with 80000 nodes and 4Mb of compliance report size",
 		noOfNodes:                   80000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -241,7 +566,38 @@ var (
 		DataRetentionPolicyInDays:   30,
 		noOfShardsInOpensearchIndex: 2,
 	}
+	testLoad80000NodesWith2MbReportPerDay = &SystemLoads{
+		name:                        "Test with 80000 nodes and 2Mb of compliance report size per day",
+		noOfNodes:                   80000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "2MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad80000NodesWith1MbReportPerDay = &SystemLoads{
+		name:                        "Test with 80000 nodes and 1Mb of compliance report size per day",
+		noOfNodes:                   80000,
+		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_DAY,
+		complianceScanReportSize:    "1MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
 	testLoad80000NodesWith2MbReport = &SystemLoads{
+		name:                        "Test with 80000 nodes and 2Mb of compliance report size",
 		noOfNodes:                   80000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -256,6 +612,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad80000NodesWith1MbReport = &SystemLoads{
+		name:                        "Test with 80000 nodes and 1Mb of compliance report size",
 		noOfNodes:                   80000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_HOUR,
@@ -270,6 +627,7 @@ var (
 		noOfShardsInOpensearchIndex: 2,
 	}
 	testLoad80000NodesWith4MbReport_perDay = &SystemLoads{
+		name:                        "Test with 80000 nodes and 4Mb of compliance report size per day",
 		noOfNodes:                   80000,
 		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_DAY,
