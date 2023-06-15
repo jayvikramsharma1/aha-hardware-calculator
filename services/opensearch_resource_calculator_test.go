@@ -30,10 +30,11 @@ var testDatas = []testData{
 	{testLoad80000NodesWith4MbReport, "Test with 80000 nodes and 4Mb of compliance report size"},
 	{testLoad80000NodesWith2MbReport, "Test with 80000 nodes and 2Mb of compliance report size"},
 	{testLoad80000NodesWith1MbReport, "Test with 80000 nodes and 1Mb of compliance report size"},
+	{testLoad80000NodesWith4MbReport_perDay, "Test with 80000 nodes and 4Mb of compliance report size per day"},
 }
 
 func TestGetOpensearchNodeCountRequired(t *testing.T) {
-	nodesRequired := getOpensearchNodeCountRequired(testLoad)
+	nodesRequired := getOpensearchNodeCount(testLoad)
 	expected := int64(10)
 	fmt.Println(nodesRequired)
 	if nodesRequired != expected {
@@ -45,7 +46,7 @@ func TestGetOpensearchNodeCountForDifferentDataAndVariables(t *testing.T) {
 	for _, test := range testDatas {
 		t.Name()
 		fmt.Println(test.testName)
-		nodesRequired := getOpensearchNodeCountRequired(test.load)
+		nodesRequired := getOpensearchNodeCount(test.load)
 		fmt.Println(nodesRequired)
 	}
 	if len(testDatas) < 1 {

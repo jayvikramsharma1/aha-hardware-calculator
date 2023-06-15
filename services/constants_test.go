@@ -258,6 +258,20 @@ var (
 	testLoad80000NodesWith1MbReport = &SystemLoads{
 		noOfNodes:                   80000,
 		noOfComplianceScan:          1,
+		frequencyOfComplianceScan:   FREQ_PER_HOUR,
+		complianceScanReportSize:    "1MB",
+		noOfClientRun:               1,
+		frequencyOfClientRun:        FREQ_PER_HOUR,
+		clientRunSize:               "300KB",
+		noOfEventFeed:               1,
+		frequencyOfEventFeed:        FREQ_PER_HOUR,
+		eventFeedUpdateSize:         "2KB",
+		DataRetentionPolicyInDays:   30,
+		noOfShardsInOpensearchIndex: 2,
+	}
+	testLoad80000NodesWith4MbReport_perDay = &SystemLoads{
+		noOfNodes:                   80000,
+		noOfComplianceScan:          1,
 		frequencyOfComplianceScan:   FREQ_PER_DAY,
 		complianceScanReportSize:    "4MB",
 		noOfClientRun:               1,
