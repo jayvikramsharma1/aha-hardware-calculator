@@ -21,7 +21,7 @@ func getOpensearchNodeCountRequiredWarmZones(loads *SystemLoads, memory int) int
 func getOpensearchNodeCount(loads *SystemLoads, memory int) int64 {
 	if loads.DataRetentionPolicyInDays > 1 {
 		nodesWithWarmZone := getOpensearchNodeCountRequiredWarmZones(loads, memory)
-		loads.DataRetentionPolicyInDays = 1
+		loads.DataRetentionPolicyInDays = 2
 		nodesWithHotZone := getOpensearchNodeCountRequiredHotZones(loads, memory)
 		return nodesWithWarmZone + nodesWithHotZone
 	} else {
